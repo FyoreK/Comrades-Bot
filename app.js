@@ -80,7 +80,7 @@ client.on('warn', e => {
 });
 
 client.on('ready', () => {
-  client.user.setActivity('FFXV - Comrades')
+  client.user.setActivity("( ͡°- ͡°) I'm Watching You")
 });
 
 client.on('error', e => {
@@ -89,14 +89,6 @@ client.on('error', e => {
 
 client.on('messageDelete', message => {
     Logging.logMessageDelete(client, message);
-});
-
-client.on('messageUpdate', (oldMessage, newMessage) => {
-    Logging.logMessageUpdate(client, oldMessage, newMessage);
-});
-
-client.on('guildBanAdd', (guild, user) =>{
-    Logging.logUserBan(client, user, guild);
 });
 
 client.login(settings.token);

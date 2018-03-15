@@ -17,11 +17,6 @@ module.exports = {
         }
     },
 
-    banUser: function(client, member, guild) {
-        member.user.dmChannel.sendMessage('You have been banned for posting profanity.')
-        member.ban(7);
-    },
-
     warnUser: function(client, member) {
         client.fetchUser(member.id)
         .then(user => user.sendMessage('Your message has been deleted for profanity and logged.'))

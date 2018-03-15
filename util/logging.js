@@ -14,15 +14,6 @@ module.exports = {
         });
     },
 
-    logMessageUpdate: function(client, oldMessage, newMessage){
-        this.getLoggingChannel(oldMessage.guild, function(loggingChannel) {
-            loggingChannel.sendMessage(`:pencil2: **Message Updated** :pencil2:
-                                        \n**User**: ${newMessage.author.username}
-                                        \n**Old Message**: ${oldMessage.content}
-                                        \n**New Message**: ${newMessage.content}`);
-        });
-    },
-
     getLoggingChannel: function(guild, callback){
         var loggingChannel = guild.channels.find('name', 'comradesbot-logging');
 
